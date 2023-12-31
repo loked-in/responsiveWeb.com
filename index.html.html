@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8"/>
+            <meta http-equiv="X-UA-Cmpatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+            <link rel="stylesheet" href="https://imgs.search.brave.com/06WILU5crigAmMXXyxEvfSjELQKabgoSYJ8DckdnUX4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNS8w/NS8wOC8xNC80Ny9z/ZW8tNzU4MjY0XzY0/MC5qcGc" />
+            <link rel="stylesheet" href="style.css"/>
+            <title>responsive navbar</title>
+        </head>
+        <body>
+            <header>
+            <div class="navbar">
+                <div class="logo"><a href="#">web dev creative</a></div>
+                <ul class="links">
+                    <li><a href="hero">home</a></li>
+                    <li><a href="about">about</a></li>
+                    <li><a href="services">services</a></li>
+                    <li><a href="contact">contact</a></li>
+                    
+                </ul>
+                <a href="#" class="action_btn">get started</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="hero">home</a></li>
+                    <li><a href="about">about</a></li>
+                    <li><a href="services">services</a></li>
+                    <li><a href="contact">contact</a></li>
+                    <li><a href="#" class="action_btn">get started</a></li>
+            </div>  
+            </header>
+<main>
+    <section id = "hero">
+        <h1>welcome</h1>
+        <p>yo gng</p>
+
+    </section>
+</main>
+            <script>
+                const toggleBtn = document.querySelector('.toggle_btn')
+                const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                const dropDownMenu = document.querySelector('.dropDown_menu')
+
+                toggleBtn.onclick = function () {
+                    dropDownMenu.classList.toggle('open')
+                    const isOpen = dropDownMenu.classList.contains('open')
+                    toggleBtn.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+                }
+            </script>
+            
+        </body>
+    </html>
